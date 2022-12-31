@@ -4,6 +4,33 @@ git config --global user.password "1234321"
 This is not working - you need to generate personal token and use it for commit
 
 
+
+
+
+
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/java-jacob/DSA.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# DSA" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/java-jacob/DSA.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/java-jacob/DSA.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+
 Git Commands IBS
 
 To get source of an old build or switch your git source to an old build -> git checkout tags/PR5.2.17.0.3
