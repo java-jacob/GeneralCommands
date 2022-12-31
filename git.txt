@@ -1,3 +1,55 @@
 git config --global user.name "java-jacob"
 git config --global user.email "jacob_john@outlook.com"
 git config --global user.password "1234321"
+This is not working - you need to generate personal token and use it for commit
+
+
+Git Commands IBS
+
+To get source of an old build or switch your git source to an old build -> git checkout tags/PR5.2.17.0.3
+
+git config --global credential.helper store
+stores username/pwd in ~/.git-credentials file
+
+ git --help
+git clone
+git status >> shows status 
+git branch -a > list all branches
+git checkout <branchname>
+git branch > shows current branch
+git branch css - create a branch css , with current branch as base. 
+git branch -d css >> Delete a branch. 
+git add --all >> add all unstaged changes to staging
+git commit -m "Rename crazy.html to rainbow.html"
+git push >> Push to remote repository. 
+git log
+git log --oneline > One line logs
+git rm crazy.html - Remove and stop tracking a file.
+git add rainbow.html - Adding a new file for tracking. 
+git config --global user.name "Your Name"
+git config --global user.email your.email@example.com
+git merge css >> will merge CSS to current branch .
+git show > Shows current branches latest diff comparison
+git diff id1 id2  - shows diff between 2 commit ids, commit ids we get from git log --oneline
+ git push --set-upstream origin 05Sep2020 >> adding local branch 05Sep2020 to remote with setting upstream as well,
+git config --list --show-origin >> used to find the config file origin, list all configs
+git config --global alias.adog "log --all --decorate --oneline --graph"
+git graph colorful - add below config to .gitconfig
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+
+After this we can try commands git lg1, git lg2, git lg
+
+git commit --amend -m "an updated commit message" 
+git checkout -f 'ABCD'
+git cherry-pick <commitid> | adds and commits from branch1 to branch2
+git cherry-pick -n <commitid> | just adds from branch1 to branch2
+git commit -m "Ported from branch1 to branch2"
+
+
+AutoMerge issues: 
+git checkout release/6.0.1.0_OSS
+git pull origin release/5.2.20.0_Mar21
+git reset --hard
