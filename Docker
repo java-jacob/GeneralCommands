@@ -22,5 +22,7 @@ docker run -it ubuntu >> Starts ubuntu shell in interactive mode.
 Ubuntu: 
 
 install - java.. 
+apt list
 apt update
-apt install 
+apt install nano
+apt remove nano
